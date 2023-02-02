@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------EX.1--------------------------------------------------------------------
+
+SELECT COUNT(id) AS 'NUMERO ISCRITTI' , YEAR(students.enrolment_date) AS 'ANNO' FROM students GROUP BY students.enrolment_date; 
+
+
+
+-------------------------------------------------------------------------EX.2--------------------------------------------------------------------
+SELECT COUNT(id) AS 'numero insegnanti' , teachers.office_address AS 'indirizzo dell\'ufficio' FROM teachers GROUP BY teachers.office_address; 
+
+
+
+-------------------------------------------------------------------------EX.3--------------------------------------------------------------------
+SELECT AVG(exam_student.vote) AS 'media voti' , exams.date AS 'appello d\'esame' FROM exams JOIN exam_student ON exams.id = exam_student.exam_id GROUP BY exams.date; 
+
+
+
+-------------------------------------------------------------------------EX.4--------------------------------------------------------------------
+SELECT COUNT(degrees.id) AS 'numero di corsi di laurea' , departments.name AS 'dipartimento' FROM departments JOIN degrees ON departments.id = degrees.department_id GROUP BY departments.name; 
